@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <!-- <script src="js/controllers.js"></script> -->
+  <script>
+  var BlaCtrl = function ($scope) {
+  	$scope.name = 'kir';
+  }
+  </script>
+</head>
+<body>
+
+	<div ng-controller="BlaCtrl()">
+	  	<p>Nothing here {{name}}</p>
+		<p>1 + 8 = {{1 + 8}}</p>
+	</div>
+</body>
+</html>
