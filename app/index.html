@@ -1,19 +1,17 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phoneBook">
 <head>
   <meta charset="utf-8">
   <title>My HTML File</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/main.css">
   
-  <script>
-  
-  </script>
 </head>
 <body>
 
 	<div class="wrapper">
-	  	<div class="card">
+
+	  	<div class="card" ng-controller="CardCtrl">
 
         <div class="panel panel-default">
           <div class="panel-body">
@@ -31,7 +29,7 @@
                     <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">    
                     <div class="caption">
                       <p>
-                        <a href="#" class="btn btn-primary" role="button">Сохранить {{2*2}}</a> 
+                        <a href="#" class="btn btn-primary" role="button">Сохранить</a> 
                         <a href="#" class="btn btn-default" role="button">Удалить</a></p>
                     </div>
                   </div>
@@ -41,23 +39,21 @@
               <div class="col-sm-6 col-md-6">
                 <div class="form-group">
                   <label for="inputName">Имя</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Имя контакта">
+                  <input type="text" class="form-control" id="inputName" placeholder="Имя контакта" ng-model="inputName">{{inputName}}
                 </div>
                 <div class="form-group">
                   <label for="inputLastName">Фамилия</label>
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Фамилия">
+                  <input type="text" class="form-control" id="inputLastName" placeholder="Фамилия" ng-model="inputLastName">{{inputLastName}}
                 </div>
                 <div class="form-group">
-                  <label for="contactInputAmount">Контактная информация</label>
+                  <label for="inputEmail">Контактная информация</label>
                   <div class="input-group">
                     <div class="input-group-addon">$</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="chubais@sveta.net">
-                    <div class="input-group-addon">.00</div>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="chubais@sveta.net" ng-model="inputEmail">{{inputEmail}}
                   </div>
                   <div class="input-group">
                     <div class="input-group-addon">$</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="+7(926)777-77-77">
-                    <div class="input-group-addon">.00</div>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+7(926)777-77-77"  ng-model="inputPhone">{{inputPhone}}
                   </div>
                 </div>
               </div>
@@ -69,8 +65,8 @@
           </div>
       </div>
 
-      <div class="list" ng-show="false">
-
+      <div class="list" ng-controller="CardCtrl">
+        
         <div class="wrap">
 
           <div class="row">
@@ -84,6 +80,7 @@
               </div>
             </div>
           </div>
+
           
           <div class="row">
             <table class="table">
@@ -97,26 +94,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>+7 (926) 45-80-130</td>
-                  <td>+7 (926) 45-80-130</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>+7 (926) 45-80-130</td>
-                  <td>+7 (926) 45-80-130</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>+7 (926) 45-80-130</td>
-                  <td>+7 (926) 45-80-130</td>
+                <tr ng-repeat="item in listCards">
+                  <td>{{item.num}}</td>
+                  <td>{{item.fName}}</td>
+                  <td>{{item.lName}}</td>
+                  <td>{{item.phone}}</td>
+                  <td>{{item.email}}</td>
                 </tr>
               </tbody>
             </table>
@@ -143,7 +126,7 @@
 
             <div class="col-sm-2 col-md-2">
               <div class="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkzIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
                 <div class="caption">
                   <p>
                     <span>имя</span>
@@ -156,7 +139,7 @@
 
             <div class="col-sm-2 col-md-2">
               <div class="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkzIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+               <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
                 <div class="caption">
                   <p>
                     <span>имя</span>
@@ -169,7 +152,7 @@
 
             <div class="col-sm-2 col-md-2">
               <div class="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkzIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
                 <div class="caption">
                   <p>
                     <span>имя</span>
@@ -182,7 +165,7 @@
 
             <div class="col-sm-2 col-md-2">
               <div class="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkzIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
                 <div class="caption">
                   <p>
                     <span>имя</span>
@@ -195,7 +178,7 @@
 
             <div class="col-sm-2 col-md-2">
               <div class="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkzIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
                 <div class="caption">
                   <p>
                     <span>имя</span>
@@ -213,7 +196,36 @@
       </div>
 
 	</div>
+  <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <!-- <script src="js/controllers.js"></script> -->
+  <script> 
+      var app = angular.module('phoneBook', []);
+
+      app.factory('InboxFactory', function($http) {
+
+        var exports = {};
+
+        exports.getMessage = function() {
+          return $http.get('json/phonebooks.json')
+              .error(function(data) {
+                    console.log('здесь ошибку', data);
+              });
+        }
+
+        return exports;
+
+      });
+
+      app.controller('CardCtrl', ['$scope','InboxFactory', function($scope,InboxFactory) {
+          $scope.inputName = 'yyyy';
+          // console.log(InboxFactory.getMessage());
+          InboxFactory.getMessage().success(function(jsonData, statusCode) {
+            $scope.listCards = jsonData;
+          });
+      }]);
+
+      
+  </script>
 </body>
 </html>

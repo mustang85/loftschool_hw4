@@ -1,0 +1,30 @@
+[
+  {
+      "num":1,
+      "fName":"Kirill",
+      "lName":"Granev",
+      "phone":"+7(926) 45-80-130",
+      "email":"sergeant-kir@mail.ru"
+  },
+  {
+      "num":2,
+      "fName":"Kirill",
+      "lName":"Granev",
+      "phone":"+7(903) 142-91-11",
+      "email":"olga-gr@mail.ru"
+  },
+  {
+      "num":3,
+      "fName":"Kirill",
+      "lName":"Granev",
+      "phone":"+7(926) 77-77-777",
+      "email":"dar-gr@mail.ru"
+  },
+  {
+      "num":4,
+      "fName":"Alex",
+      "lName":"Granev",
+      "phone":"+7(926) 55-55-555",
+      "email":"alex-gr@mail.ru"
+  }
+]
