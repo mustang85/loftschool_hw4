@@ -1,0 +1,16 @@
+/* backgraound */
+/* colors */
+/* font */
+/* size */
+/* line-height */
+h1 {
+  font-size: 24px;
+  margin: 0 0 17px;
+  text-align: center;
+}
+label {
+  font-size: 14px;
+}
+button {
+  font-size: 12px;
+}

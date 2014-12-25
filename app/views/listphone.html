@@ -1,0 +1,44 @@
+<div class="listphone">
+
+	  <div class="row">
+	    <div class="panel panel-default">
+	      <div class="panel-heading">
+	        <input class="btn btn-default" type="button" value="Добавить">
+	      </div>
+	      <div class="panel-body">
+	        <a href="#/list">
+		        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+	        </a>
+	        <a href="#/tile">
+	        	<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+
+	  
+	  <div class="row">
+	    <table class="table">
+	      <thead>
+	        <tr>
+	          <th>#</th>
+	          <th>Имя</th>
+	          <th>Фамилия</th>
+	          <th>Телефон</th>
+	          <th>Емайл</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr ng-repeat="item in listCards">
+	          <td>{{item.num}}</td>
+	          <td>{{item.fName}}</td>
+	          <td>{{item.lName}}</td>
+	          <td>{{item.phone}}</td>
+	          <td>{{item.email}}</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div>
+
+	
+</div>

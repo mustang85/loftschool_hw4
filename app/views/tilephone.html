@@ -1,0 +1,38 @@
+<div class="tilephone">
+
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <input class="btn btn-default" type="button" value="Добавить">
+        </div>
+        <div class="panel-body">
+          <a href="#/list">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+          </a>
+          <a href="#/tile">
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-2 col-md-2" ng-repeat="item in listCards">
+        <a href="#/tile/card{{item.id}}">
+          <div class="thumbnail">
+            <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+            <div class="caption">
+              <p>
+                <span>{{item.fName}}</span>
+                <span>{{item.lName}}</span>
+                <span>{{item.phone}}</span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+</div>

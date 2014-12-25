@@ -10,197 +10,118 @@
 <body>
 
 	<div class="wrapper">
+    
+    <h1 class="h1">Контакты</h1>
 
-	  	<div class="card" ng-controller="CardCtrl">
+    <div class="main">
+      
+      <!-- <ul>
+        <li>
+          <a href="#/list">list</a>
+        </li>
+        <li>
+          <a href="#/tile">tile</a>
+        </li>
+        <li>
+          <a href="#/card">card default</a>
+        </li>
+        <li>
+          <a href="#/tile/card/">card user</a>
+        </li>
+      </ul> -->
+      {{uCard.id}}
+<div class="card">
 
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
-          </div>
-        </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+      </div>
+    </div>
 
-          <div class="wrap">
-            <div class="row">
+    <div class="wrap">
+        <div class="row">
 
-              <form>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <div class="thumbnail">
-                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">    
-                    <div class="caption">
-                      <p>
-                        <a href="#" class="btn btn-primary" role="button">Сохранить</a> 
-                        <a href="#" class="btn btn-default" role="button">Удалить</a></p>
-                    </div>
+          <form>
+            <div class="col-sm-6 col-md-6">
+              <div class="form-group info-photo">
+                <div class="thumbnail">
+                  <img src="https://api.fnkr.net/testimg/190x190/00CED1/FFF/?text=190x190">    
+                  <div class="caption">
+                    <p>
+                      <a href="#" class="btn btn-primary" role="button">Сохранить</a> 
+                      <a href="#" class="btn btn-default" role="button">Удалить</a></p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="col-sm-6 col-md-6">
+          <div class="col-sm-6 col-md-6">
+            <div class="info-user">
                 <div class="form-group">
                   <label for="inputName">Имя</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Имя контакта" ng-model="inputName">{{inputName}}
+                  <input type="text" class="form-control" id="inputName" placeholder=""+{{userCard.fName}}+"" ng-model="userCard.fName">{{uCard.fName}}
                 </div>
-                <div class="form-group">
+                <div class="form-group ">
                   <label for="inputLastName">Фамилия</label>
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Фамилия" ng-model="inputLastName">{{inputLastName}}
+                  <input type="text" class="form-control" id="inputLastName" placeholder="Фамилия" ng-model="userCard.lName">
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">Контактная информация</label>
                   <div class="input-group">
                     <div class="input-group-addon">$</div>
-                    <input type="text" class="form-control" id="inputEmail" placeholder="chubais@sveta.net" ng-model="inputEmail">{{inputEmail}}
+                    <input type="text" class="form-control" id="inputEmail" placeholder="chubais@sveta.net" ng-model="userCard.email">
                   </div>
                   <div class="input-group">
                     <div class="input-group-addon">$</div>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="+7(926)777-77-77"  ng-model="inputPhone">{{inputPhone}}
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+7(926)777-77-77"  ng-model="userCard.phone">
                   </div>
                 </div>
-              </div>
-              </form>
+            </div>
+          </div>
+        </form>
               
 
 
-            </div>
-          </div>
-      </div>
-
-      <div class="list" ng-controller="CardCtrl">
-        
-        <div class="wrap">
-
-          <div class="row">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <input class="btn btn-default" type="button" value="Добавить">
-              </div>
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="row">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Имя</th>
-                  <th>Фамилия</th>
-                  <th>Телефон</th>
-                  <th>Емайл</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="item in listCards">
-                  <td>{{item.num}}</td>
-                  <td>{{item.fName}}</td>
-                  <td>{{item.lName}}</td>
-                  <td>{{item.phone}}</td>
-                  <td>{{item.email}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
         </div>
-      </div>
-
-      <div class="tile" ng-show="false">
-        <div class="wrap">
-          <div class="row">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <input class="btn btn-default" type="button" value="Добавить">
-              </div>
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-              </div>
-            </div>
-          </div>
-      
-          <div class="row">
-
-            <div class="col-sm-2 col-md-2">
-              <div class="thumbnail">
-                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
-                <div class="caption">
-                  <p>
-                    <span>имя</span>
-                    <span>фамилия</span>
-                    <span>телефон</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-2 col-md-2">
-              <div class="thumbnail">
-               <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
-                <div class="caption">
-                  <p>
-                    <span>имя</span>
-                    <span>фамилия</span>
-                    <span>телефон</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-2 col-md-2">
-              <div class="thumbnail">
-                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
-                <div class="caption">
-                  <p>
-                    <span>имя</span>
-                    <span>фамилия</span>
-                    <span>телефон</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-2 col-md-2">
-              <div class="thumbnail">
-                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
-                <div class="caption">
-                  <p>
-                    <span>имя</span>
-                    <span>фамилия</span>
-                    <span>телефон</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-2 col-md-2">
-              <div class="thumbnail">
-                <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
-                <div class="caption">
-                  <p>
-                    <span>имя</span>
-                    <span>фамилия</span>
-                    <span>телефон</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
+    </div>
+</div>
+      <ng-view></ng-view>
+    </div>
+  
 
 	</div>
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
   <!-- <script src="js/controllers.js"></script> -->
   <script> 
-      var app = angular.module('phoneBook', []);
+      var app = angular.module('phoneBook', ['ngRoute']);
+
+      app.config(function($routeProvider) {
+        $routeProvider.when('/list', {
+          templateUrl: 'views/listphone.html',
+          controller: 'ListCtrl'
+        })
+        // .when('/list/card/:id', {
+        //   templateUrl: 'views/сard.html',
+        //   controller: 'CardCtrl'
+        // })
+        .when('/tile', {
+          templateUrl: 'views/tilephone.html',
+          controller: 'ListCtrl'
+        })
+        .when('/tile/card/:id', {
+          templateUrl: 'views/hub.html',
+          controller: 'CardCtrl'
+        })
+        .when('/card', {
+          templateUrl: 'views/hub.html',
+          controller: 'CardCtrl'
+        })
+        .otherwise({redirectTo: '/card'});
+        
+      });
 
       app.factory('InboxFactory', function($http) {
 
@@ -217,12 +138,24 @@
 
       });
 
-      app.controller('CardCtrl', ['$scope','InboxFactory', function($scope,InboxFactory) {
+      app.controller('ListCtrl', ['$scope','InboxFactory', function($scope,InboxFactory) {
           $scope.inputName = 'yyyy';
-          // console.log(InboxFactory.getMessage());
-          InboxFactory.getMessage().success(function(jsonData, statusCode) {
-            $scope.listCards = jsonData;
+          
+          InboxFactory.getMessage()
+            .success(function(jsonData, statusCode) {
+              $scope.listCards = jsonData;
           });
+
+      }]);
+
+
+      app.controller('CardCtrl', ['$scope', 'InboxFactory', function($scope,InboxFactory){
+        $scope.txt = 'text';
+
+          InboxFactory.getMessage()
+          .success(function(jsonData, statusCode) {
+            $scope.uCard = jsonData;
+          })
       }]);
 
       
