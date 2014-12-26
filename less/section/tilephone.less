@@ -1,0 +1,30 @@
+@import '../content/base.less';
+@import 'listphone.less';
+
+.tilephone {
+	.listphone;
+
+	@media (min-width: 992px) {
+		.col-md-2 {
+			height: 150px;
+			width: 20%;
+		}
+	}
+
+	.thumbnail {
+		height: 76px;
+
+		.caption {
+			position: absolute;
+		}
+
+		p {
+			font-size: 12px;
+
+			span:last-child {
+				display: block;
+			}
+		}
+	}
+		
+}

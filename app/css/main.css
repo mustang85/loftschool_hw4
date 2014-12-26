@@ -570,9 +570,28 @@ button {
   font-size: 12px;
 }
 
+td {
+  font-size: 12px;
+}
+
+th {
+  font-size: 15px;
+}
+
 body {
   background: url("../img/bg.jpg") no-repeat;
   background-size: cover;
+}
+
+.wrapper h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 83px 0 19px;
+  text-transform: uppercase;
+}
+
+.wrapper .row {
+  margin: 0;
 }
 
 .main {
@@ -582,11 +601,85 @@ body {
   width: 800px;
 }
 
+.panel-default {
+  background: transparent;
+  border-color: #ddd;
+  border: 0;
+  margin: -62px 0 0;
+  position: absolute;
+  width: 800px;
+}
+
+.panel-default .panel-body {
+  padding: 15px 15px 15px 0;
+}
+
+.icon {
+  background: transparent url("../img/sprite.png") -20px -20px no-repeat;
+  display: inline-block;
+  font: 0px/0 a;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  vertical-align: baseline;
+}
+
+.icon-arrow-left {
+  background-position: 0 0;
+  width: 26px;
+  height: 26px;
+}
+
+.icon-phone {
+  background-position: -2px -34px;
+  top: 7px;
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 17px;
+}
+
+.icon-email {
+  background-position: 0 -64px;
+  top: 11px;
+  position: absolute;
+  left: 13px;
+  width: 14px;
+  height: 10px;
+}
+
+.icon-tile {
+  background-position: -70px -41px;
+  width: 28px;
+  height: 25px;
+}
+
+.icon-tile-wh {
+  background-position: -70px -1px;
+}
+
+.icon-list {
+  background-position: -33px -39px;
+  width: 28px;
+  height: 25px;
+}
+
+.icon-list-wh {
+  background-position: -33px -1px;
+}
+
+.btn {
+  padding: 4px 0;
+  width: 91px;
+}
+
 .card h1 {
   margin: 308px 0 17px;
 }
 
 .card .wrap {
+  margin: 60px 0 0;
   padding: 37px 0 77px;
 }
 
@@ -610,10 +703,134 @@ body {
 
 .card .caption p {
   margin: 0;
+  left: -4px;
+  overflow: hidden;
+  position: relative;
+  width: 203px;
 }
 
 .card .info-user {
   margin: 0 auto;
   position: relative;
+  left: -45px;
   width: 70%;
+}
+
+.card .info-user .form-control {
+  padding: 5px 15px;
+}
+
+.card .btn {
+  float: left;
+}
+
+.card .btn + .btn {
+  float: right;
+}
+
+.card label {
+  font-size: 14px;
+  margin: 0 0 3px;
+  font-weight: normal;
+}
+
+.card .contact_info .input-group {
+  margin: 0 0 17px;
+  width: 100%;
+}
+
+.card .contact_info .form-control {
+  height: 30px;
+  padding: 2px 15px;
+}
+
+.card .input-group-addon {
+  width: 38px;
+}
+
+.listphone {
+  margin: 60px 0 0;
+}
+
+.listphone .row {
+  padding: 22px 13px;
+}
+
+.listphone .panel-default {
+  margin: -64px 0 0;
+}
+
+.listphone .panel-heading {
+  background: transparent;
+  border: 0;
+  padding: 15px 15px 15px 0;
+}
+
+.listphone .panel-body {
+  float: right;
+  padding: 0;
+  margin: -50px 0 0;
+}
+
+.listphone th:first-child {
+  width: 70px;
+}
+
+.listphone th + th {
+  width: 170px;
+}
+
+.tilephone {
+  margin: 60px 0 0;
+}
+
+.tilephone .row {
+  padding: 22px 13px;
+}
+
+.tilephone .panel-default {
+  margin: -64px 0 0;
+}
+
+.tilephone .panel-heading {
+  background: transparent;
+  border: 0;
+  padding: 15px 15px 15px 0;
+}
+
+.tilephone .panel-body {
+  float: right;
+  padding: 0;
+  margin: -50px 0 0;
+}
+
+.tilephone th:first-child {
+  width: 70px;
+}
+
+.tilephone th + th {
+  width: 170px;
+}
+
+@media (min-width: 992px) {
+  .tilephone .col-md-2 {
+    height: 150px;
+    width: 20%;
+  }
+}
+
+.tilephone .thumbnail {
+  height: 76px;
+}
+
+.tilephone .thumbnail .caption {
+  position: absolute;
+}
+
+.tilephone .thumbnail p {
+  font-size: 12px;
+}
+
+.tilephone .thumbnail p span:last-child {
+  display: block;
 }

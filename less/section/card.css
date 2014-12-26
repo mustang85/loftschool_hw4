@@ -2,6 +2,7 @@
   margin: 308px 0 17px;
 }
 .card .wrap {
+  margin: 60px 0 0;
   padding: 37px 0 77px;
 }
 .card .info-photo {
@@ -21,10 +22,39 @@
 }
 .card .caption p {
   margin: 0;
+  left: -4px;
+  overflow: hidden;
+  position: relative;
+  width: 203px;
 }
 .card .info-user {
   margin: 0 auto;
   position: relative;
   left: -45px;
   width: 70%;
+}
+.card .info-user .form-control {
+  padding: 5px 15px;
+}
+.card .btn {
+  float: left;
+}
+.card .btn + .btn {
+  float: right;
+}
+.card label {
+  font-size: 14px;
+  margin: 0 0 3px;
+  font-weight: normal;
+}
+.card .contact_info .input-group {
+  margin: 0 0 17px;
+  width: 100%;
+}
+.card .contact_info .form-control {
+  height: 30px;
+  padding: 2px 15px;
+}
+.card .input-group-addon {
+  width: 38px;
 }

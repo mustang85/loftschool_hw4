@@ -4,6 +4,7 @@
 	}
 
 	.wrap {
+		margin: 60px 0 0;
 		padding: 37px 0 77px;
 	}
 
@@ -26,6 +27,10 @@
 
 		p {
 			margin: 0;
+			left: -4px;
+			overflow: hidden;
+			position: relative;
+			width: 203px;
 		}
 	}
 
@@ -34,5 +39,40 @@
 		position: relative;
 		left: -45px;
 		width: 70%;
+
+		.form-control {
+			padding: 5px 15px;
+		}
 	}
+
+	.btn {
+		float: left;
+	}
+
+	.btn + .btn {
+		float: right;
+	}
+
+	label {
+		font-size: 14px;
+		margin: 0 0 3px;
+		font-weight: normal;
+	}
+
+	.contact_info {
+		.input-group {
+			margin: 0 0 17px;
+			width: 100%;
+		}
+
+		.form-control {
+			height: 30px;
+			padding: 2px 15px;
+		}
+	}
+
+	.input-group-addon {
+		width: 38px;
+	}
+
 }
