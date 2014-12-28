@@ -1,9 +1,10 @@
-      {{uCard.id}}
 <div class="card">
 
     <div class="panel panel-default">
-      <div class="panel-body">
-        <a href="#" class="icon icon-arrow-left"></a>
+    <div class="panel-body">
+        <a href="#/list">
+          <i class="icon icon-arrow-left"></i>
+          </a>
       </div>
     </div>
 
@@ -14,7 +15,7 @@
             <div class="col-sm-6 col-md-6">
               <div class="form-group info-photo">
                 <div class="thumbnail">
-                  <img src="https://api.fnkr.net/testimg/190x190/00CED1/FFF/?text=190x190">    
+                  <img src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=200x200">    
                   <div class="caption">
                     <p>
                       <a href="#" class="btn btn-primary" role="button">Сохранить</a> 
@@ -28,26 +29,21 @@
             <div class="info-user">
                 <div class="form-group">
                   <label for="inputName">Имя</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Имя" ng-model="fName">{{fName}}
+                  <input type="text" class="form-control" id="inputName" placeholder="{{uCard[idUser].fName}}" ng-model="fName">{{fName}}
                 </div>
                 <div class="form-group ">
                   <label for="inputLastName">Фамилия</label>
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Фамилия" ng-model="lName">{{lName}}
+                  <input type="text" class="form-control" id="inputLastName" placeholder="{{uCard[idUser].lName}}" ng-model="lName">
                 </div>
-
-                <div class="form-group contact_info">
+                <div class="form-group  contact_info">
                   <label for="inputEmail">Контактная информация</label>
                   <div class="input-group">
-                    <div class="input-group-addon">
-                      <i class="icon icon-email"></i>
-                    </div>
-                    <input type="text" class="form-control" id="inputEmail" placeholder="chubais@sveta.net" ng-model="email">{{email}}
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="{{uCard[idUser].email}}" ng-model="email">
                   </div>
                   <div class="input-group">
-                    <div class="input-group-addon">
-                      <i class="icon icon-phone"></i>
-                    </div>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="+7(926)777-77-77"  ng-model="phone">{{phone}}
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="{{uCard[idUser].phone}}"  ng-model="phone">
                   </div>
                 </div>
             </div>
@@ -59,3 +55,5 @@
         </div>
     </div>
 </div>
+
+<my-custom-element></my-custom-element>

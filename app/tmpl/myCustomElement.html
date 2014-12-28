@@ -1,0 +1,13 @@
+<h1>messages</h1>
+<ul>
+	<li ng-show="!messages.length">данных нет</li>
+	<li ng-repeat="item in messages">
+		<span>{{item.num}}</span>
+		<span>{{item.fName}}</span>
+		<span>{{item.lName}}</span>
+		<span>{{item.email}}</span>
+		<span>{{item.phone}}</span>
+	</li>
+</ul>
+
+<click-me title="MY name is !!!"></click-me>

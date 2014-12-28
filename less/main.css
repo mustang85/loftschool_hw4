@@ -446,25 +446,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
-  background: url(../img/bg.jpg) no-repeat;
-  background-size: cover;
-}
-.wrapper h1 {
-  font-size: 24px;
-  line-height: 24px;
-  margin: 83px 0 19px;
-  text-transform: uppercase;
-}
-.wrapper .row {
-  margin: 0;
-}
-.main {
-  background: #f5f5f9;
-  border-radius: 5px;
-  margin: 0 auto;
-  width: 800px;
-}
 /* backgraound */
 /* colors */
 /* font */
@@ -486,6 +467,25 @@ td {
 }
 th {
   font-size: 15px;
+}
+body {
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+}
+.wrapper h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 83px 0 19px;
+  text-transform: uppercase;
+}
+.wrapper .row {
+  margin: 0;
+}
+.main {
+  background: #f5f5f9;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 800px;
 }
 .panel-default {
   background: transparent;
