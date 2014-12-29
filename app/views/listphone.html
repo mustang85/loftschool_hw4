@@ -1,3 +1,4 @@
+{{flag}}
 <!-- <pre>{{listCards | json}}</pre> -->
 
 <div class="listphone">
@@ -8,7 +9,7 @@
       	<a class="btn btn-default" href="#/list/card">Добавить</a>
       </div>
       <div class="panel-body">
-        <a href="#/list">
+        <a href="#/list" ng-class="{'icon-tile-wh': flag}" ng-click="doSomeThing()">
 	        <span class="icon icon-list"></span>
         </a>
         <a href="#/tile">
@@ -19,7 +20,7 @@
 	  
 
 	  
-	  <div class="row">
+	  <div class="row" ng-if="flag">
 	    <table class="table">
 	      <thead>
 	        <tr>

@@ -19,7 +19,7 @@
 
     <div class="main">
       
-      <!-- <ul>
+       <ul>
         <li>
           <a href="#/list">list</a>
         </li>
@@ -32,125 +32,29 @@
         <li>
           <a href="#/tile/card/">card user</a>
         </li>
-      </ul> -->
+      </ul>
 
       <ng-view></ng-view>
     </div>
   
 
 	</div>
+
+  <!-- Alien *.js Script -->
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- Our *.js Script -->
+  <script src="js/app.js"></script>
+  <script src="js/factory/InboxFactory.js"></script>
+  <script src="js/controllers/CardCtrl.js"></script>
+  <script src="js/controllers/ListCtrl.js"></script>
+  <script src="js/directive/tilePhoneElement/tilePhoneElement.js"></script>
+  <script src="js/directive/clickMe.js"></script>
 
   <!-- <script src="js/controllers.js"></script> -->
   <script> 
-      var app = angular.module('phoneBook', ['ngRoute']);
 
-      app.config(function($routeProvider) {
-        $routeProvider.when('/list', {
-          templateUrl: 'views/listphone.html',
-          controller: 'ListCtrl'
-        })
-        .when('/list/card:id', {
-           templateUrl: 'views/usercard.html',
-           controller: 'CardCtrl'
-        })
-        .when('/tile', {
-          templateUrl: 'views/tilephone.html',
-          controller: 'ListCtrl'
-        })
-        .when('/tile/card', {
-          templateUrl: 'views/usercard.html',
-          controller: 'CardCtrl'
-        })
-        .when('/list/card', {
-          templateUrl: 'views/usercard.html',
-          controller: 'CardCtrl'
-        })
-        .otherwise({redirectTo: '/card'});
-        
-      });
-
-      app.factory('InboxFactory', function($http) {
-
-        var exports = {};
-
-        exports.getMessage = function() {
-          console.log($http.get('json/phonebooks.json'));
-          return $http.get('json/phonebooks.json')
-              .error(function(data) {
-                    console.log('здесь ошибку', data);
-              });
-        }
-
-        return exports;
-
-      });
-
-      app.controller('ListCtrl', ['$scope','InboxFactory', function($scope,InboxFactory) {
-          $scope.inputName = 'yyyy';
-          
-          InboxFactory.getMessage()
-            .success(function(jsonData, statusCode) {
-              $scope.listCards = jsonData;
-          });
-
-      }]);
-
-
-      app.controller('CardCtrl', ['$scope', 'InboxFactory', function($scope,InboxFactory) {
-        $scope.txt = 'text';
-
-          InboxFactory.getMessage()
-          .success(function(jsonData, statusCode) {
-            $scope.uCard = jsonData;
-          });
-
-        $scope.flag = false;
-        $scope.idUser = location.href.slice((location.href.lastIndexOf('/') + 7));
-        console.log($scope.idUser);
-      }]);
-
-      app.directive('myCustomElement', function () {
-        
-        return {
-          restrict: 'EA',
-          scope: true,
-          templateUrl: "tmpl/myCustomElement.html",
-          controller: ('myCustomElementCtrl', ['$scope', 'InboxFactory', function($scope,InboxFactory) {
-            InboxFactory.getMessage()
-              .success(function(jsonData, statusCode) {
-                $scope.messages = jsonData;
-            });
-            
-            
-          }]),
-    
-          link: function (scope, iElement, iAttrs) {}
-
-       }});
-
-      app.directive('clickMe', function () {
-        return {
-          restrict: 'E',
-          scope: {
-            title: '@'
-          },
-          template: "<p>Click Me Please</p>",
-          link: function (scope, iElement, iAttrs) {
-            scope.list = 'lf ld sa';
-
-            iElement.bind('click', function(event) {
-              console.log(scope.title);
-              alert(scope.title);
-              console.log(scope.list);
-            });
-          }
-
-      }});
-
-      
   </script>
 </body>
 </html>
