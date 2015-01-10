@@ -34,14 +34,14 @@
   width: 28px;
   height: 25px;
 }
-.icon-tile-wh {
-  background-position: -70px -1px;
-}
 .icon-list {
   background-position: -33px -39px;
   width: 28px;
   height: 25px;
 }
-.icon-list-wh {
+.active .icon-tile-wh {
+  background-position: -70px -1px;
+}
+.active .icon-list-wh {
   background-position: -33px -1px;
 }

@@ -1,17 +1,21 @@
-{{flag}}
+<div class="panel panel-default" ng-controller="PanelCtrl">
+  {{tab}}
+      <div class="panel-heading">
+        <a class="btn btn-default" href="#/list/card">Добавить</a>
+      </div>
+      <div class="panel-body" ng-class="{ active: isSelected(1) }">
+        <a href="#/list" ng-click="selectTab(1)">
+          <span class="icon icon-list" ></span>
+          <!-- ng-class="{icon-list-wh: isSelected(1)}" -->
+        </a>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <a class="btn btn-default" href="#/tile/card">Добавить</a>
-  </div>
-  <div class="panel-body">
-    <a href="#/list">
-      <span class="icon icon-list"></span>
-    </a>
-    <a href="#/tile" ng-click="doSomeThing()">
-      <span class="icon icon-tile"></span>
-    </a>
-  </div>
-</div>
+        
+      </div>
+    <div class="panel-body" ng-class="{ active: isSelected(2) }">
+          <a href="#/tile" ng-click="selectTab(2)">
+            <span class="icon icon-tile"></span>
+          </a>
+        </div>
+    </div>
 
 <tile-phone-element></tile-phone-element>

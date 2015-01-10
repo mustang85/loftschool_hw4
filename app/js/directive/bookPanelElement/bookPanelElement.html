@@ -1,0 +1,47 @@
+  <div class="panel panel-default">
+  <!-- {{flag}} -->
+
+  <form action="" class="panel-find">
+    <div class="wrap wrap-filter" ng-class="{active: flagFilter}">
+      <span class="glyphicon glyphicon-filter" ng-click="filterCard()" title="Фильтер на отстрел"></span>
+      <input class="btn find-lname" type="text" placeholder="Фильтр по фамилии"  ng-model="fname">
+      <input class="btn find-fname" type="text" placeholder="Фильтр по имени"  ng-model="lname">  
+    </div>
+{{findCardUser}}
+    <div class="wrap wrap-find" ng-class="{active: flagFind}">
+      <span class="glyphicon glyphicon-search" ng-click="findCard()" title="Поиск на отстрел"></span>
+      <input class="btn find-user" type="text" placeholder="Поиск по фамилии">
+      <span class="glyphicon glyphicon-remove" title="Сбросить поиск"></span>
+    </div>
+    
+    
+    <!-- ng-keyup="searchByCard()" -->
+  </form>
+
+    <div class="panel-heading">
+    	<a class="btn btn-default" href="#/list/card">Добавить</a>
+    </div>
+
+  	<div class="panel-body" >
+      <!-- #/list -->
+      <a href=""  ng-class="{ active: isSelected(1) }" ng-click="selectTab(1)">
+        <span class="icon icon-list icon-list-wh" ></span>
+        <!-- ng-class="{icon-list-wh: isSelected(1)}" -->
+      </a>
+       <!-- #/tile -->
+       <a href="" ng-class="{ active: isSelected(2) }" ng-click="selectTab(2)">
+          <span class="icon icon-tile icon-tile-wh"></span>
+       </a>
+    </div>
+
+  
+  </div>
+
+  <div ng-if="tab === 1">
+    <list-phone-element></list-phone-element> 
+  </div>
+  
+  <div ng-if="tab === 2">
+    <tile-phone-element></tile-phone-element> 
+  </div>
+	

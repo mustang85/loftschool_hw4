@@ -26,19 +26,6 @@ th {
 .listphone .row {
   padding: 22px 13px;
 }
-.listphone .panel-default {
-  margin: -64px 0 0;
-}
-.listphone .panel-heading {
-  background: transparent;
-  border: 0;
-  padding: 15px 15px 15px 0;
-}
-.listphone .panel-body {
-  float: right;
-  padding: 0;
-  margin: -50px 0 0;
-}
 .listphone th:first-child {
   width: 70px;
 }
@@ -51,19 +38,6 @@ th {
 .tilephone .row {
   padding: 22px 13px;
 }
-.tilephone .panel-default {
-  margin: -64px 0 0;
-}
-.tilephone .panel-heading {
-  background: transparent;
-  border: 0;
-  padding: 15px 15px 15px 0;
-}
-.tilephone .panel-body {
-  float: right;
-  padding: 0;
-  margin: -50px 0 0;
-}
 .tilephone th:first-child {
   width: 70px;
 }
@@ -72,18 +46,21 @@ th {
 }
 @media (min-width: 992px) {
   .tilephone .col-md-2 {
-    height: 150px;
+    height: 195px;
     width: 20%;
   }
 }
 .tilephone .thumbnail {
-  height: 76px;
+  height: 136px;
 }
 .tilephone .thumbnail .caption {
+  bottom: 0;
+  padding: 0;
   position: absolute;
 }
 .tilephone .thumbnail p {
-  font-size: 12px;
+  font-size: 13px;
+  text-align: center;
 }
 .tilephone .thumbnail p span:last-child {
   display: block;

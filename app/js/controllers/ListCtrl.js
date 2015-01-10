@@ -1,25 +1,23 @@
-app.controller('ListCtrl', ['$scope','InboxFactory', function($scope,InboxFactory) {
-  $scope.inputName = 'yyyy';
+app.controller('ListCtrl', ['$scope','InboxFactory', '$firebase', 'fbURL', function($scope,InboxFactory,$firebase,fbURL) {
+ //  $scope.tab = 1;  
+ // $scope.selectTab = function (setTab) {
+ //        $scope.tab = setTab;
+ //      };
 
-  $scope.flag = true;
-  
-  InboxFactory.getMessage()
-    .success(function(jsonData, statusCode) {
-      $scope.listCards = jsonData;
-  });
+ //      $scope.isSelected = function (checkTab) {
+ //        return $scope.tab === checkTab;
+ //      };
 
-  $scope.doSomeThing = function () {
-    
-    if ($scope.flag == true) {
-      $scope.flag = false;
-      return $scope.flag;
-    } 
+ //      $scope.searchByCard = function (e) {
+ //        console.log(typeof $scope.lName);
+ //        var t = 'Granev';
+ //        $( "td:contains("+$scope.lName+")" ).css( "text-decoration", "underline" );
+ //        // var el = $(e.currentTarget);
 
-    return $scope.flag = true;
-  }
+ //      };
 
-  
-
-
+	$scope.title = fbURL;
+	$scope.listCardsArr = InboxFactory.getCardArr();
+	console.log($scope.listCardsArr);
 
 }]);

@@ -26,19 +26,6 @@ th {
 .listphone .row {
   padding: 22px 13px;
 }
-.listphone .panel-default {
-  margin: -64px 0 0;
-}
-.listphone .panel-heading {
-  background: transparent;
-  border: 0;
-  padding: 15px 15px 15px 0;
-}
-.listphone .panel-body {
-  float: right;
-  padding: 0;
-  margin: -50px 0 0;
-}
 .listphone th:first-child {
   width: 70px;
 }
