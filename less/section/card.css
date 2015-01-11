@@ -41,6 +41,7 @@
 }
 .card .btn + .btn {
   float: right;
+  margin: 0 8px 0 0;
 }
 .card label {
   font-size: 14px;
@@ -57,4 +58,13 @@
 }
 .card .input-group-addon {
   width: 38px;
+}
+.card .panel-default {
+  margin: -62px 0 0;
+}
+.card .btn-edit {
+  float: none;
+}
+.card .pulse {
+  color: #f35626;
 }

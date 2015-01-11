@@ -1,11 +1,11 @@
-<div class="tilephone">
+<div class="tilephone" ng-if="isSelected(2)">
 
-    <div class="row" ng-if="flag">
+    <div class="row">
 
-      <div class="col-sm-2 col-md-2" ng-repeat="item in listCards">
-        <a href="#/tile/card{{item.id}}">
+      <div class="col-sm-2 col-md-2" ng-repeat="item in listCardsArr | filter: lname | filter: fname">
+        <a href="#/list/card/{{item.$id}}">
           <div class="thumbnail">
-            <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+            <img src="https://api.fnkr.net/testimg/350x380/00CED1/FFF/?text=350x380">
             <div class="caption">
               <p>
                 <span>{{item.fName}}</span>
@@ -17,6 +17,12 @@
         </a>
       </div>
 
+      <div ng-show="listCardsArr == false">
+        <p>В книге нет записей</p>
+      </div>
+
     </div>
+
+
 
 </div>
