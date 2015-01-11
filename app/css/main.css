@@ -615,5 +615,6 @@ body {
 .card .info-user {
   margin: 0 auto;
   position: relative;
+  left: -45px;
   width: 70%;
 }
