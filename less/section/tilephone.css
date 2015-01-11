@@ -1,0 +1,67 @@
+/* backgraound */
+/* colors */
+/* font */
+/* size */
+/* line-height */
+h1 {
+  font-size: 24px;
+  margin: 0 0 17px;
+  text-align: center;
+}
+label {
+  font-size: 14px;
+}
+button {
+  font-size: 12px;
+}
+td {
+  font-size: 12px;
+}
+th {
+  font-size: 15px;
+}
+.listphone {
+  margin: 60px 0 0;
+}
+.listphone .row {
+  padding: 22px 13px;
+}
+.listphone th:first-child {
+  width: 70px;
+}
+.listphone th + th {
+  width: 170px;
+}
+.tilephone {
+  margin: 60px 0 0;
+}
+.tilephone .row {
+  padding: 22px 13px;
+}
+.tilephone th:first-child {
+  width: 70px;
+}
+.tilephone th + th {
+  width: 170px;
+}
+@media (min-width: 992px) {
+  .tilephone .col-md-2 {
+    height: 195px;
+    width: 20%;
+  }
+}
+.tilephone .thumbnail {
+  height: 136px;
+}
+.tilephone .thumbnail .caption {
+  bottom: 0;
+  padding: 0;
+  position: absolute;
+}
+.tilephone .thumbnail p {
+  font-size: 13px;
+  text-align: center;
+}
+.tilephone .thumbnail p span:last-child {
+  display: block;
+}

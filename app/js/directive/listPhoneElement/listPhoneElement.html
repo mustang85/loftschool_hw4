@@ -1,0 +1,36 @@
+<div class="listphone">
+
+	  <div class="row">
+	    <table class="table">
+	      <thead>
+	        <tr>
+	          <th>#</th>
+	          <th>Имя</th>
+	          <th>Фамилия</th>
+	          <th>Телефон</th>
+	          <th>Емайл</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	
+	        <tr ng-repeat="item in listCardsArr | filter: lname | filter: fname">
+	          <td colspan="5">
+	          	<!-- <a href="#/list/card{{item.id}}"> -->
+	          	<a href="#/list/card/{{item.num}}">
+	          	<span>{{$index + 1}}</span>
+	          	<span>{{item.fName}}</span>
+	          	<span>{{item.lName}}</span>
+	          	<span>{{item.phone}}</span>
+	          	<span>{{item.email}}</span>
+	          	</a>
+	          </td>
+	        </tr>
+	        <tr ng-show="listCardsArr == false">
+	      		<td colspan="5">В книге нет записей</td>
+	      	</tr>
+	      </tbody>
+	    </table>
+	  </div>
+
+	
+</div>

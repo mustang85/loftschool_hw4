@@ -1,0 +1,30 @@
+.listphone tbody tr:hover td,
+.listphone tbody tr.active td {
+  background: #A0522D;
+  color: #FFF;
+  font-weight: bold;
+}
+.listphone tbody tr:hover a,
+.listphone tbody tr.active a {
+  color: #FFF;
+  font-weight: bold;
+}
+.table a {
+  display: block;
+}
+.table a span {
+  display: inline-block;
+}
+.table a span:nth-child(1) {
+  width: 10%;
+}
+.table a span:nth-child(2),
+.table a span:nth-child(4) {
+  width: 22%;
+}
+.table a span:nth-child(3) {
+  width: 22%;
+}
+.table a span:nth-child(5) {
+  width: 21%;
+}

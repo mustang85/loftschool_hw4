@@ -1,0 +1,51 @@
+@import '../../lesshat/build/lesshat.less';
+
+.icon {
+	background: transparent url('../img/sprite.png') -20px -20px no-repeat;
+	display: inline-block;
+	font: 0px/0 a;
+	margin: 0 10px 0 0;
+	overflow: hidden;
+	position: relative;
+	top: 4px;
+	vertical-align: baseline;
+}
+
+.icon-arrow-left {
+	background-position: 0 0;
+	.size(26px,26px);
+}
+
+.icon-phone {
+	background-position: -2px -34px;
+	top: 7px;
+	position: absolute;
+	left: 12px;
+	.size(16px,17px);
+}
+
+.icon-email {
+	background-position: 0 -64px;
+	top: 11px;
+	position: absolute;
+	left: 13px;
+	.size(14px,10px);
+}
+
+.icon-tile {
+	background-position: -70px -41px;	
+	.size(28px,25px);
+}
+
+.icon-list {
+	background-position: -33px -39px;
+	.size(28px,25px);
+}
+
+.active .icon-tile-wh {
+	background-position: -70px -1px;
+}
+
+.active .icon-list-wh {
+	background-position: -33px -1px;
+}

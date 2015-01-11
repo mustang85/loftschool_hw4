@@ -1,5 +1,9 @@
+{{flag}}
+<!-- <pre>{{listCards | json}}</pre> -->
+
 <div class="listphone">
 
+<<<<<<< HEAD
 	  <div class="row">
 	    <div class="panel panel-default">
 	      <div class="panel-heading">
@@ -19,6 +23,26 @@
 
 	  
 	  <div class="row" ng-show="$scope.flag">
+=======
+	  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      	<a class="btn btn-default" href="#/list/card">Добавить</a>
+      </div>
+      <div class="panel-body">
+        <a href="#/list" ng-class="{'icon-tile-wh': flag}" ng-click="doSomeThing()">
+	        <span class="icon icon-list"></span>
+        </a>
+        <a href="#/tile">
+        	<span class="icon icon-tile"></span>
+        </a>
+      </div>
+    </div>
+	  
+
+	  
+	  <div class="row" ng-if="flag">
+>>>>>>> 54eb259028e46679854f809860501b13c5953fc2
 	    <table class="table">
 	      <thead>
 	        <tr>
@@ -32,8 +56,8 @@
 	      <tbody>
 	        <tr ng-repeat="item in listCards">
 	          <td>{{item.num}}</td>
-	          <td>{{item.fName}}</td>
-	          <td>{{item.lName}}</td>
+	          <td><a href="#/list/card{{item.id}}">{{item.fName}}</a></td>
+	          <td><a href="#/list/card{{item.id}}">{{item.lName}}</a></td>
 	          <td>{{item.phone}}</td>
 	          <td>{{item.email}}</td>
 	        </tr>

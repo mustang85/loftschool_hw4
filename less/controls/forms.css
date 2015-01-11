@@ -1,0 +1,50 @@
+.panel-find {
+  position: absolute;
+  top: 15px;
+  left: 106px;
+  white-space: nowrap;
+}
+.panel-find .wrap-filter,
+.panel-find .wrap-find {
+  -webkit-transition: width 0.3s ease-out 0.1s;
+  -moz-transition: width 0.3s ease-out 0.1s;
+  -o-transition: width 0.3s ease-out 0.1s;
+  transition: width 0.3s ease-out 0.1s;
+  overflow: hidden;
+  width: 18px;
+}
+.panel-find .wrap-filter.active {
+  width: 300px;
+}
+.panel-find .wrap-find.active {
+  width: 192px;
+}
+.panel-find .btn {
+  padding: 4px;
+  text-align: left;
+}
+.panel-find .find-lname {
+  margin: 0 5px 0 0;
+  width: 135px;
+}
+.panel-find .find-fname {
+  width: 123px;
+}
+.panel-find .find-user {
+  padding-right: 15px;
+  width: 154px;
+}
+.panel-find span.glyphicon {
+  cursor: pointer;
+  top: 4px;
+  margin: 0 3px 0 0;
+}
+.panel-find span.glyphicon-remove {
+  position: absolute;
+  margin: 5px 0 0;
+  right: 20px;
+}
+.panel-find .wrap {
+  display: inline-block;
+  position: relative;
+}

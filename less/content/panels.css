@@ -1,0 +1,24 @@
+.panel-default {
+  background: transparent;
+  border-color: #ddd;
+  border: 0;
+  margin: -62px 0 0;
+  position: absolute;
+  width: 800px;
+}
+.panel-default .panel-body {
+  padding: 15px 15px 15px 0;
+}
+.panel-default a {
+  display: inline-block;
+}
+.panel-default .panel-heading {
+  background: transparent;
+  border: 0;
+  padding: 15px 15px 15px 0;
+}
+.panel-default .panel-body {
+  float: right;
+  padding: 0;
+  margin: -46px 0 0;
+}

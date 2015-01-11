@@ -14,13 +14,30 @@ label {
 button {
   font-size: 12px;
 }
+td {
+  font-size: 12px;
+}
+th {
+  font-size: 15px;
+}
 body {
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
 }
+.wrapper h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: -102px 0 19px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 800px;
+}
+.wrapper .row {
+  margin: 0;
+}
 .main {
   background: #f5f5f9;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 139px auto 0;
   width: 800px;
 }

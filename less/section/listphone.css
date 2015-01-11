@@ -20,3 +20,15 @@ td {
 th {
   font-size: 15px;
 }
+.listphone {
+  margin: 60px 0 0;
+}
+.listphone .row {
+  padding: 22px 13px;
+}
+.listphone th:first-child {
+  width: 70px;
+}
+.listphone th + th {
+  width: 170px;
+}
