@@ -22,20 +22,13 @@ app.controller('CardCtrl', ['$scope', 'InboxFactory', function($scope,InboxFacto
 			.addClass('animated pulse');
 	}
 
-<<<<<<< HEAD
 	// $scope.setCard = function () {
 	// 	InboxFactory.setCard({'text':'test'});
 	// }
-=======
-	$scope.setCard = function () {
-		InboxFactory.setCard({'text':'test'});
-	}
->>>>>>> d1700334eae93c4fd416248814101355c5864c25
 
 	$scope.removeCard = function (id) {
 		// InboxFactory.removeCard();
 		InboxFactory.removeCard(id);
-<<<<<<< HEAD
 	}
 
 	$scope.submitForm = function (json) {
@@ -48,14 +41,6 @@ app.controller('CardCtrl', ['$scope', 'InboxFactory', function($scope,InboxFacto
 			return;
 		}
 		
-=======
-		console.log(uCard[idUser]);
-		console.log('remove' + id);
-		alert('');
-	}
-
-	if ($scope.idUser) {
->>>>>>> d1700334eae93c4fd416248814101355c5864c25
 		$scope.flag = false;
 		setAttrInput('disabled','disabled');	
 	}

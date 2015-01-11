@@ -1,13 +1,5 @@
 <!doctype html>
-<<<<<<< HEAD
 <html lang="en">
-=======
-<<<<<<< HEAD
-<html lang="en" ng-app="app">
-=======
-<html lang="en">
->>>>>>> 54eb259028e46679854f809860501b13c5953fc2
->>>>>>> d1700334eae93c4fd416248814101355c5864c25
 <head>
   <meta charset="utf-8">
   <title>My HTML File</title>
@@ -38,26 +30,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	<parent-view ng-controller="parentCtrl"></parent-view>
-  <children-view ng-controller="childrenCtrl"></children-view>
-
-  <parent>
-    <children>
-      <baby></baby>
-    </children>
-  </parent>
-  
-
-
-
-	</div>
-
-  
-=======
->>>>>>> d1700334eae93c4fd416248814101355c5864c25
 	<div class="wrapper"  ng-app="phoneBook">
 
     <div class="main">
@@ -159,7 +131,6 @@
     </form>
 
   <!-- Alien *.js Script -->
->>>>>>> 54eb259028e46679854f809860501b13c5953fc2
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
@@ -205,72 +176,13 @@
   <script src="js/controllers/CardCtrl.js"></script>
   <script src="js/controllers/ListCtrl.js"></script>
   <script src="js/controllers/PanelCtrl.js"></script>
-<<<<<<< HEAD
   <script src="js/directive/tilePhoneElement/tilePhoneElement.js"></script>
   <script src="js/directive/listPhoneElement/listPhoneElement.js"></script>
-=======
-  <script src="js/controllers/TestCtrl.js"></script>
-  <script src="js/directive/tilePhoneElement/tilePhoneElement.js"></script>
-  <script src="js/directive/listPhoneElement/listPhoneElement.js"></script>
-  <script src="js/directive/clickMe.js"></script>
->>>>>>> d1700334eae93c4fd416248814101355c5864c25
   <script src="js/directive/bookPanelElement/bookPanelElement.js"></script>
 
   <!-- <script src="js/controllers.js"></script> -->
   <script> 
-<<<<<<< HEAD
-      var app = angular.module('plunker', []);
 
-app.controller('parentCtrl', function($scope, $element, $attrs) {
-  this.name = 'has parent controller';
-  this.scope = $scope;
-  this.element = $element;
-  this.attrs = $attrs;
-  console.log('parentCtrl:', $scope.$id, $element[0].tagName);
-});
-
-app.controller('childrenCtrl', function($scope, $element, $attrs) {
-  this.name = 'has children controller';
-  this.scope = $scope;
-  this.element = $element;
-  this.attrs = $attrs;
-  console.log('childrenCtrl:', $scope.$id, $element[0].tagName);
-});
-
-app.directive('parent', function() {
-  return {
-    restrict: 'E',
-    controller: 'parentCtrl',
-    link: function(scope, element, attrs, ctrl) {
-      console.log('Parent', ctrl.name, ctrl.scope.$id, ctrl.element[0].tagName);
-    }
-  }
-});
-
-app.directive('children', function() {
-  return {
-    restrict: 'E',
-    require: '^parent',
-    controller: 'childrenCtrl',
-    link: function(scope, element, attrs, ctrl) {
-      console.log('Children', ctrl.name, ctrl.scope.$id, ctrl.element[0].tagName);
-    }
-  }
-})
-
-app.directive('baby', function() {
-  return {
-    restrict: 'E',
-    require: ['^parent', '^children'],
-    link: function(scope, element, attrs, ctrls) {
-      console.log('Baby', ctrls[0].name,  ctrls[0].scope.$id, ctrls[0].element[0].tagName, ctrls[1].name, ctrls[1].scope.$id, ctrls[1].element[0].tagName);
-    }
-  }
-})
-      
-=======
-
->>>>>>> 54eb259028e46679854f809860501b13c5953fc2
   </script>
 </body>
 </html>
