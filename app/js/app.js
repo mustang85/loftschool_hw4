@@ -12,6 +12,7 @@ app.config(function($routeProvider) {
   //    templateUrl: 'views/tabs.html',
   //    controller: 'ListCtrl'
   // })
+<<<<<<< HEAD
   .when('/list/card/:id', {
      templateUrl: 'views/usercard.html',
      controller: 'CardCtrl'
@@ -21,10 +22,21 @@ app.config(function($routeProvider) {
     controller: 'CardCtrl'
   })
   .when('/tile/card', {
-    templateUrl: 'views/usercard.html',
-    controller: 'CardCtrl'
+=======
+  .when('/list/card:id', {
+     templateUrl: 'views/usercard.html',
+     controller: 'CardCtrl'
   })
-  .when('/list/card', {
+  // .when('/tile', {
+  //   templateUrl: 'views/tilephone.html',
+  //   controller: 'ListCtrl'
+  // })
+  // .when('/tile/card', {
+  //   templateUrl: 'views/usercard.html',
+  //   controller: 'CardCtrl'
+  // })
+  .when('/list/card/:id', {
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
     templateUrl: 'views/usercard.html',
     controller: 'CardCtrl'
   })
@@ -32,6 +44,14 @@ app.config(function($routeProvider) {
     templateUrl: 'views/usercard.html',
     controller: 'CardCtrl'
   })
+<<<<<<< HEAD
+  .when('/card', {
+    templateUrl: 'views/usercard.html',
+    controller: 'CardCtrl'
+  })
   .otherwise({redirectTo: 'list'});
+=======
+  .otherwise({redirectTo: 'views/card.html'});
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
   
 });

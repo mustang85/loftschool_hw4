@@ -60,8 +60,11 @@ app.directive('bookPanelElement', function () {
         return;
       } 
 
+<<<<<<< HEAD
       // TODO: complete find for tilephone
 
+=======
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
       cells = $('.tilephone div'); 
     });
 
@@ -88,6 +91,7 @@ app.directive('bookPanelElement', function () {
 
     });
 
+<<<<<<< HEAD
     inputFind.on('keyup', function(event) {
 
       if (inputFind.val() == '') {
@@ -101,6 +105,8 @@ app.directive('bookPanelElement', function () {
       }
     });
 
+=======
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
     iResetFind.on('click', function(event) {
       event.preventDefault();
 
@@ -112,7 +118,10 @@ app.directive('bookPanelElement', function () {
           }
 
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
       } else {
         $('.thumbnail').each(function() {
       

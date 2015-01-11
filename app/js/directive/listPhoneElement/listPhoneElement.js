@@ -25,7 +25,11 @@ app.directive('listPhoneElement', function () {
   // }]),
 
   link: function (scope, iElement, iAttrs) {
+<<<<<<< HEAD
     // console.log(listCards);
+=======
+    console.log(listCards);
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
     // console.log(scope);
     // var listPhone = $('.iElement').find('tr');
     // console.log(listPhone.length);

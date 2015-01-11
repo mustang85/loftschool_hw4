@@ -447,6 +447,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -3223,6 +3228,10 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54eb259028e46679854f809860501b13c5953fc2
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
 /* backgraound */
 /* colors */
 /* font */
@@ -3239,16 +3248,27 @@ label {
 button {
   font-size: 12px;
 }
+<<<<<<< HEAD
+=======
 td {
   font-size: 12px;
 }
 th {
   font-size: 15px;
 }
+>>>>>>> 54eb259028e46679854f809860501b13c5953fc2
 body {
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
 }
+<<<<<<< HEAD
+.main {
+  background: #f5f5f9;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 800px;
+}
+=======
 .wrapper h1 {
   font-size: 24px;
   line-height: 24px;
@@ -3426,6 +3446,10 @@ body {
   display: inline-block;
   position: relative;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54eb259028e46679854f809860501b13c5953fc2
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
 .card h1 {
   margin: 308px 0 17px;
 }

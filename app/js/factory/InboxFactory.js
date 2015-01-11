@@ -14,6 +14,12 @@ app.factory('InboxFactory', function($firebase,fbURL) {
 		sync = $firebase(ref),
 		exports = {};
 
+<<<<<<< HEAD
+=======
+  console.log(sync.$asArray());
+  console.log(sync.$asObject());
+
+>>>>>>> d1700334eae93c4fd416248814101355c5864c25
   exports.removeCard = function (id) {
     return sync.$remove(id);
   };
